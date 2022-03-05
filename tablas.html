@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reto</title>
+</head>
+<body>
+    <button class="button" id="btn1" onclick="genera_tabla1()">Ver tabla 1</button>
+    <button class="button" id="btn2">Ver tabla 2</button>
+    <div id="tabla1">
+        <table class="tabla1">
+            <tr>
+                <td class="tabla1">1</td>
+                <td class="tabla1">2</td>
+                <td class="tabla1">3</td>
+                <td class="tabla1">4</td>
+            </tr>
+            <tr>
+                <td class="tabla1">5</td>
+                <td class="tabla1">6</td>
+                <td class="tabla1">7</td>
+                <td class="tabla1">8</td>
+            </tr>
+            <tr>
+                <td class="tabla1">9<br>13</td>
+                <td class="tabla1">10<br>14</td>
+                <td class="tabla1">11<br>15</td>
+                <td class="tabla1">12<br>16</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="tabla2">
+        <table class="tb2 t2">
+            <thead>
+                <td class="tb2" colspan="3"><p>Placeholder Text</p></td>
+            </thead>
+            <tr class="grc">
+                <td class="tb2" rowspan="2"><p>Placeholder Text</p></td>
+                <td class="tb2" colspan="2"><p>Placeholder</p></td>
+            </tr>
+            <tr class="grc">
+                <td class="tb2"><p>Placeholder</p></td>
+                <td class="tb2"><p>Placeholder</p></td>
+            </tr>
+            <tr class="gris">
+                <td>asdf</td>
+                <td>asdf</td>
+                <td>asdf</td>
+            </tr>
+            <tr>
+                <td>asdf</td>
+                <td>asdf</td>
+                <td>asdf</td>
+            </tr>
+            <tr class="gris">
+                <td>asdf</td>
+                <td>asdf</td>
+                <td>asdf</td>
+            </tr>
+            <tr>
+                <td>asdf</td>
+                <td>asdf</td>
+                <td>asdf</td>
+            </tr>
+            <tfoot class="gris tb2">
+                <td class="tb2"><b>Total</b></td>
+                <td class="tabla2" colspan="2"><b>asdf</b></td>            
+            </tfoot>
+        </table>
+    </div>
+    <script>
+        function genera_tabla1() {
+        var body = document.getElementsByTagName("body")[0];
+        var tabla1   = document.createElement("table");
+        var tblBody = document.createElement("tbody");
+        for (var i = 1; i <= 4; i++) {
+            // Crea las hileras de la tabla
+            var hilera = document.createElement("tr");
+            for (var j = 1; j <= 4; j++) {
+            var celda = document.createElement("td");
+            var textoCelda = document.createTextNode(i*j);
+            celda.appendChild(textoCelda);
+            hilera.appendChild(celda);
+            }
+
+            tblBody.appendChild(hilera);
+        }
+        tabla1.appendChild(tblBody);
+        body.appendChild(tabla1);
+        tabla1.setAttribute("border", "1");
+        tabla1.setAttribute("width", "30");
+        tabla1.style.borderCollapse="collapse";
+        tabla1.style.width="30em";
+        document.getElementById("tabla1").style.borderCollapse = "collapse";
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+body{
+  font-family: "Lato", sans-serif;
+}
+
+.tabla1{
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 30em;
+}
+
+/*tr:nth-child(odd) {
+  background-color: gray;
+}*/
+.tb2 {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: rgb(18, 116, 31);
+  
+}
+tfoot{
+  text-align: center;
+}
+
+.grc{
+  background-color: rgb(117, 199, 128);
+}
+
+.gris{
+  background-color: rgb(238, 231, 231);
+}
+
+p {
+  color: aliceblue;
+  text-align: center;
+}
+
+.t2{
+  width: 30em;
+}
+
+div{
+  padding-bottom: 1em;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
